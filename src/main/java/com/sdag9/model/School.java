@@ -1,31 +1,12 @@
 package com.sdag9.model;
 
-import com.sdag9.repositories.SchoolRepository;
-
+import javax.persistence.*;
 import java.util.List;
 
-public class School implements DefaultModel {
-    private  int id;
-    private String name;
+@Entity
+public class School extends DefaultModel {
+    @OneToMany
     private List<Student> studentsList;
-
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
 
     public void setStudents(List<Student> students) {
         this.studentsList = students;

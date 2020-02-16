@@ -1,13 +1,32 @@
 package com.sdag9.model;
 
-public interface DefaultModel {
-    int getId();
+import javax.persistence.*;
 
-    void setId(int id);
+@MappedSuperclass
+public abstract class DefaultModel {
 
-    String getName();
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    protected Long id;
 
-    void setName(String name);
+    @Column
+    protected String name;
+
+    public Long getId(){
+        return id;
+    }
+
+    public void setId(Long id){
+        this.id = id;
+    };
+
+    public String getName(){
+        return name;
+    };
+
+    public void setName(String name){
+        this.name = name;
+    };
 
 //    public <T> List<T> getStudents();
 

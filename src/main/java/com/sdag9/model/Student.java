@@ -1,26 +1,14 @@
 package com.sdag9.model;
 
-public class Student implements  DefaultModel {
-    private int id;
+import javax.persistence.*;
+
+@Entity
+public class Student extends  DefaultModel {
+    @Column
     private long cnp;
-    private String name;
+
+    @ManyToOne
     private School school;
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public long getCnp() {
         return cnp;
