@@ -26,12 +26,14 @@ public class SchoolManager {
         Student student = new Student();
         student.setId(123L);
         student.setName("name");
-        student.setCnp(5246321655583542L);
+        student.setCnp("5246321655583542");
+        student.setAge(22);
 
         Student student1 = new Student();
-        student.setId(1234L);
-        student.setName("name1");
-        student.setCnp(5643543546454355L);
+        student1.setId(1234L);
+        student1.setName("name1");
+        student1.setCnp("5643543546454355");
+        student1.setAge(23);
 
         School school = new School();
         student.setId(321L);
@@ -42,6 +44,7 @@ public class SchoolManager {
         school.setName("schoolName1");
 
 
+
         schoolRepository.save(school);
         schoolRepository.save(school1);
 
@@ -49,6 +52,7 @@ public class SchoolManager {
         studentRepository.save(student1);
 
     }
+
 
     public SchoolRepository getSchoolRepository() {
         return schoolRepository;
