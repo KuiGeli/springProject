@@ -37,10 +37,10 @@
                 <span th:if="${#fields.hasErrors('cnp')}" th:errors="*{cnp}" class="text-danger"></span>
             </div>
             <div class="col-md-6">
-                <label for="eMail">eMail</label>
-                <input id="eMail" th:field="*{eMail}" type="text">
+                <label for="email">Email</label>
+                <input id="email" th:field="*{email}" type="text">
                 <br></br>
-                <span th:if="${#fields.hasErrors('eMail')}" th:errors="*{eMail}" class="text-danger"></span>
+                <span th:if="${#fields.hasErrors('email')}" th:errors="*{email}" class="text-danger"></span>
             </div>
             <div class="col-md-6">
                 <label for="age">Age</label>

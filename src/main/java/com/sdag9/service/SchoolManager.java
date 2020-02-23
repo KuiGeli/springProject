@@ -1,4 +1,4 @@
-package com.sdag9;
+package com.sdag9.service;
 
 import com.sdag9.model.School;
 import com.sdag9.model.Student;

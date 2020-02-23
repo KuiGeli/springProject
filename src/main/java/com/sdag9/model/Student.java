@@ -29,7 +29,7 @@ public class Student extends DefaultModel {
     private String lastName;
     @Column
     @NotBlank(message = "eMail is mandatory")
-    private String eMail;
+    private String email;
 
 //    private Student(Builder builder) {
 //        this.cnp = builder.cnp;
@@ -45,12 +45,12 @@ public class Student extends DefaultModel {
         return new Builder();
     }
 
-    public String geteMail() {
-        return eMail;
+    public String geteEmail() {
+        return email;
     }
 
-    public void seteMail(String eMail) {
-        this.eMail = eMail;
+    public void seteEmail(String eMail) {
+        this.email = eMail;
     }
 
     public String getCnp() {
